@@ -1,0 +1,27 @@
+@page
+@model Delete
+
+<h1>Do you want delete ?</h1>
+
+<table class="table">
+    <tr>
+        <th scope="col">@Html.DisplayNameFor(model => model.users.id)</th>
+        <th scope="col">@Html.DisplayNameFor(model => model.users.name)</th>
+        <th scope="col">@Html.DisplayNameFor(model => model.users.address)</th>
+        <th scope="col">@Html.DisplayNameFor(model => model.users.email)</th>
+        <th scope="col">@Html.DisplayNameFor(model => model.users.account)</th>
+        <th scope="col">@Html.DisplayNameFor(model => model.users.password)</th>
+    </tr>
+    <tr>
+        <td>@Model.users.id</td>
+        <td>@Model.users.name</td>
+        <td>@Model.users.address</td>
+        <td>@Model.users.email</td>
+        <td>@Model.users.account</td>
+        <td>@Model.users.password</td>
+    </tr>
+</table>
+
+<form method="post">
+    <input type="submit" value="Xoa" asp-route-id="@Model.users.id">
+</form>

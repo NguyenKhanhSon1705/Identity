@@ -1,0 +1,35 @@
+@page
+@model UserPages
+
+<h1>THEM USER</h1>
+<div>
+    <form method="post">
+        <div class="from-group">
+            <label asp-for="@Model.user.name"></label>
+            <input class="form-control " asp-for="@Model.user.name"></input>
+        </div>
+
+        <div class="from-group">
+            <label asp-for="@Model.user.address"></label>
+            <input class="form-control " asp-for="@Model.user.address"></input>
+        </div>
+
+        <div class="from-group">
+            <label asp-for="@Model.user.email"></label>
+            <input class="form-control " asp-for="@Model.user.email"></input>
+        </div>
+
+        <div class="from-group">
+            <label asp-for="@Model.user.account"></label>
+            <input class="form-control " asp-for="@Model.user.account"></input>
+        </div>
+
+        <div class="from-group">
+            <label asp-for="@Model.user.password"></label>
+            <input class="form-control " asp-for="@Model.user.password"></input>
+        </div>
+        <div>
+            <input class="center p-3 mt-3 px-5" type="submit" value="Gửi">
+        </div>
+    </form>
+</div>

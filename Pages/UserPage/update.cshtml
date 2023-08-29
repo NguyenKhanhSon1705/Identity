@@ -1,0 +1,24 @@
+@page
+@model Update
+
+<h1>Cap Nhat User</h1>
+
+<form method="post">
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(e => e.users.name)</th>
+            <th>@Html.DisplayNameFor(e => e.users.address)</th>
+            <th>@Html.DisplayNameFor(e => e.users.email)</th>
+            <th>@Html.DisplayNameFor(e => e.users.account)</th>
+            <th>@Html.DisplayNameFor(e => e.users.password)</th>
+        </tr>
+        <tr>
+            <td><input asp-for="@Model.users.name"></td>
+            <td><textarea asp-for="@Model.users.address"></textarea></td>
+            <td><input asp-for="@Model.users.email"></td>
+            <td><input asp-for="@Model.users.account"></td>
+            <td><input asp-for="@Model.users.password"></td>
+        </tr>
+    </table>
+    <input type="submit" value="Save">
+</form>

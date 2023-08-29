@@ -1,0 +1,29 @@
+@page
+
+@model ViewUser 
+@{
+    
+}
+
+<h1>Danh sach cac ten</h1>
+<a asp-page="UserPage">Thêm Mới</a>
+
+
+<table class="table">
+    <tr>
+        <th scope="col">@Html.DisplayNameFor(model => model.users[0].id)</th>
+        <th scope="col">@Html.DisplayNameFor(model => model.users[0].name)</th>
+        <th>Options</th>
+    </tr>
+    @foreach(var user in Model.users){
+        <tr>
+            <td>@Html.DisplayFor(item => user.id)</td>
+            <td>@Html.DisplayFor(item => user.name)</td>
+            <td>
+                <a asp-page="./details" asp-route-id="@user.id">details</a>
+                <a asp-page="./update" asp-route-id="@user.id">update</a>
+                <a asp-page="./delete" asp-route-id="@user.id">delete</a>
+            </td>
+        </tr>
+    }
+</table>
